@@ -1,5 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<Autor>
+
+<form asp-controller="Home" asp-action="Create">
+    <select asp-for="idAutor" class="form-select" aria-label="Default select example"
+            asp-items="@(new SelectList(Model.Autor, nameof(Autor.idAutor), nameof(Autor.Nombre)))">
+        <option>AUTOR DE LIBROS</option>
+    </select>
+</form>
